@@ -1,0 +1,28 @@
+@charset "UTF-8";
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: hsl(0,0%,94%);
+	width: 100vw;
+	height: 100vh;
+}
+.oxy{
+	color: green;
+	font-size: 22px;
+	font-weight: bolder;
+}
+.con{
+	background-color:  greenyellow;
+	width: 500px;
+	height: 30px;
+	border-radius: 5px;
+	text-align: center;
+	color: black;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+

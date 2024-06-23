@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>This is index page...</h1>
+	
+	<!-- Conditional and Iteration example Thymeleaf.... -->
+
+	<!-- Conditional example -->
+	<div th:if="${condition}">
+		<p>Condition is true!</p>
+	</div>
+	<div th:unless="${condition}">
+		<p>Condition is false!</p>
+	</div>
+	
+	<!-- Iteration example -->
+	<ul>
+		<li th:each="item : ${items}" th:text="${item}">Item</li>
+	</ul> 
+	
+	
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="text-center mt-4">
+		<h1>This is Profile page...</h1>
+		<div class="col-md-6 offset-md-3">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">ID</th>
+						<th scope="col">NAME</th>
+						<th scope="col">ADDRESS</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="u:${student}" th:classappend="${u.id%2==0}?'bg-success':'bg-warning'">
+					<td><span th:text="${u.id}"></span></td>
+						<td th:text="${u.name}"></td>
+						<td th:text="${u.address}"></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>

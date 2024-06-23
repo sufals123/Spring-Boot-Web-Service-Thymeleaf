@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	
+	<div th:replace="~{header :: myHeader}"></div>
+
+    <h1>This is the Home page</h1>
+    <h1>My name is: <span th:text="${name}"></span></h1>
+    <h1>Today's Date: <span th:text="${date}"></span></h1>
+    
+    <hr/>
+    <h1>User Information:</h1>
+    <h3>ID: <span th:text="${user.id}"></span></h3>
+    <h3>Name: <span th:text="${user.name}"></span></h3>
+    <h3>Address: <span th:text="${user.adress}"></span></h3>
+    
+    <hr/>
+    <h1>User Information:</h1>
+    <h3>ID: <span th:text="${user1.id}"></span></h3>
+    <h3>Name: <span th:text="${user1.name}"></span></h3>
+    <h3>Address: <span th:text="${user1.adress}"></span></h3> 
+    
+    <hr/>
+    <a th:class="profile" th:href="@{/profile}">Profile</a>
+    <!--<a th:href="@{/profile/{id}(id=${user.id})}">Profile of User using id</a> -->
+
+	<div th:replace="~{footer :: myFooter}"></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:replace="~{header :: myHeader}"></div>
+<h1>This is profile page</h1>
+
+
+<p>sum : <span th:text="20 + 20"></span></p>
+
+<div th:if="${status} == true">
+	True block
+</div>
+
+<div th:if="${3+3} == 6">
+	True block
+</div>
+
+
+
+
+<div th:replace="~{footer :: myFooter}"></div>
+</body>
+</html>
